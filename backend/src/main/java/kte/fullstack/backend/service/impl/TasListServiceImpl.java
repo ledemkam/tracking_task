@@ -6,6 +6,7 @@ import kte.fullstack.backend.service.TaskListService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -18,5 +19,23 @@ public class TasListServiceImpl implements TaskListService {
 
     public List<TaskList> getAllTaskLists() {
         return taskListRepository.findAll();
+    }
+
+    public TaskList createTaskList(TaskList taskList) {
+        if(taskList.getId() != null) {
+            throw new IllegalArgumentException("TaskList id must be null");
+        }
+        if (taskList.getTitle() == null || taskList.getTitle().isBlank()) {
+            throw new IllegalArgumentException("TaskList title must not be null or blank");
+        }
+        LocalDateTime now = LocalDateTime.now();
+        return taskListRepository.save(new TaskList(
+                null,
+                taskList.getTitle(),
+                taskList.getDescription(),
+                null,
+                now,
+                now
+        ));
     }
 }

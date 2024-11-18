@@ -1,12 +1,11 @@
 package kte.fullstack.backend.controller;
 
 import kte.fullstack.backend.dto.TaskListDTO;
+import kte.fullstack.backend.entity.TaskList;
 import kte.fullstack.backend.mappers.TaskListMapper;
 import kte.fullstack.backend.service.TaskListService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,4 +24,14 @@ public class TaskListController {
                 .map(taskListMapper::toDTO)
                 .toList();
     }
+
+    @PostMapping
+    public TaskListDTO createTaskList(@RequestBody TaskListDTO taskListDTO) {
+        TaskList createdTaskList = taskListService.createTaskList(
+                taskListMapper.fromDTO(taskListDTO)
+        );
+        return taskListMapper.toDTO(createdTaskList);
+    }
+
+
 }
