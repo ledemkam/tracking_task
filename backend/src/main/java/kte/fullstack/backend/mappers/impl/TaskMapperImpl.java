@@ -1,7 +1,7 @@
 package kte.fullstack.backend.mappers.impl;
 
-import kte.fullstack.backend.dto.TaskDTO;
-import kte.fullstack.backend.entity.Task;
+import kte.fullstack.backend.model.dto.TaskDTO;
+import kte.fullstack.backend.model.entity.Task;
 import kte.fullstack.backend.mappers.TaskMapper;
 import org.springframework.stereotype.Component;
 

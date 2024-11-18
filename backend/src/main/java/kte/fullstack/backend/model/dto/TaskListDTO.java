@@ -1,4 +1,4 @@
-package kte.fullstack.backend.dto;
+package kte.fullstack.backend.model.dto;
 
 import java.util.List;
 import java.util.UUID;

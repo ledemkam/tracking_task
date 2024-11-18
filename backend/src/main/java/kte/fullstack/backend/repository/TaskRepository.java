@@ -1,6 +1,6 @@
 package kte.fullstack.backend.repository;
 
-import kte.fullstack.backend.entity.Task;
+import kte.fullstack.backend.model.entity.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package kte.fullstack.backend.repository;
 
-import kte.fullstack.backend.entity.TaskList;
+import kte.fullstack.backend.model.entity.TaskList;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

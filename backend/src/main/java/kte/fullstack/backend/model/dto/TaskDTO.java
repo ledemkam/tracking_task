@@ -1,7 +1,7 @@
-package kte.fullstack.backend.dto;
+package kte.fullstack.backend.model.dto;
 
-import kte.fullstack.backend.entity.TaskPriority;
-import kte.fullstack.backend.entity.TaskStatus;
+import kte.fullstack.backend.model.entity.TaskPriority;
+import kte.fullstack.backend.model.entity.TaskStatus;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

@@ -1,9 +1,9 @@
 package kte.fullstack.backend.mappers.impl;
 
-import kte.fullstack.backend.dto.TaskListDTO;
-import kte.fullstack.backend.entity.Task;
-import kte.fullstack.backend.entity.TaskList;
-import kte.fullstack.backend.entity.TaskStatus;
+import kte.fullstack.backend.model.dto.TaskListDTO;
+import kte.fullstack.backend.model.entity.Task;
+import kte.fullstack.backend.model.entity.TaskList;
+import kte.fullstack.backend.model.entity.TaskStatus;
 import kte.fullstack.backend.mappers.TaskMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

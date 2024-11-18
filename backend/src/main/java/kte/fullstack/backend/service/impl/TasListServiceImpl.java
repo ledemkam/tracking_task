@@ -1,6 +1,6 @@
 package kte.fullstack.backend.service.impl;
 
-import kte.fullstack.backend.entity.TaskList;
+import kte.fullstack.backend.model.entity.TaskList;
 import kte.fullstack.backend.repository.TaskListRepository;
 import kte.fullstack.backend.service.TaskListService;
 import lombok.RequiredArgsConstructor;

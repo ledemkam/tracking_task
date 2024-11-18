@@ -1,7 +1,7 @@
 package kte.fullstack.backend.service;
 
 
-import kte.fullstack.backend.entity.TaskList;
+import kte.fullstack.backend.model.entity.TaskList;
 
 import java.util.List;
 

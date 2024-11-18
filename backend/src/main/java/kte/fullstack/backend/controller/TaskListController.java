@@ -1,7 +1,7 @@
 package kte.fullstack.backend.controller;
 
-import kte.fullstack.backend.dto.TaskListDTO;
-import kte.fullstack.backend.entity.TaskList;
+import kte.fullstack.backend.model.dto.TaskListDTO;
+import kte.fullstack.backend.model.entity.TaskList;
 import kte.fullstack.backend.mappers.TaskListMapper;
 import kte.fullstack.backend.service.TaskListService;
 import lombok.RequiredArgsConstructor;

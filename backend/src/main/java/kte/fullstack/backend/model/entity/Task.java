@@ -1,19 +1,16 @@
-package kte.fullstack.backend.entity;
-
+package kte.fullstack.backend.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
-
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "task_lists")
-public class TaskList {
+@Table(name = "tasks")
+public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -26,12 +23,24 @@ public class TaskList {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "taskList", cascade = {CascadeType.REMOVE, CascadeType.PERSIST})
-    private List<Task> tasks;
+    @Column(name = "due_date")
+    private LocalDateTime dueDate;
+
+    @Column(name = "status", nullable = false)
+    private TaskStatus status;
+
+    @Column(name = "priority", nullable = false)
+    private TaskPriority priority;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "task_list_id")
+    private TaskList taskList;
 
     @Column(name = "created", nullable = false)
     private LocalDateTime created;
 
     @Column(name = "updated", nullable = false)
     private LocalDateTime updated;
+
+
 }
